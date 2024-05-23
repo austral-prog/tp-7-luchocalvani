@@ -30,10 +30,13 @@ def put(word, list):
 
 def remove(word, list):
     contador = 0
-    for index, element in enumerate(list):
-        if element == word:
-            list[index] = ""
-            contador += 1
-            print(list)
-    return contador
-    return -1
+    if list != "":
+        for index, element in enumerate(list):
+            if element == word:
+                list[index] = ""
+                contador += 1
+                print(list)
+        return contador
+    else:
+        return -1
+
